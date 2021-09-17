@@ -1,0 +1,122 @@
+application {
+	config {
+	    applicationType monolith
+		baseName rpm
+		packageName com.github.scottvin.rpm
+        buildTool gradle
+        clientFramework react
+        clientTheme Darkly
+        clientThemeVariant light
+	}
+}
+
+// Result
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity Result {
+	name String required
+}
+
+// Vision
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity Vision {
+	name String required
+}
+
+// Purpose
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity Purpose {
+	name String required
+}
+
+// Role
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity Role {
+	name String required
+}
+
+// Outcome
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity Outcome {
+	name String required
+	dateTime ZonedDateTime required
+	duration Duration required
+}
+
+// Character
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity Character {
+	name String required
+	description String required
+	priority Integer required
+}
+
+// CharacterGroup
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity CharacterGroup {
+	name String required
+	priority Integer required
+}
+
+// Practice
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity Practice {
+	practice String required
+}
+
+// Quote
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+@microservice(rpm)
+entity Quote {
+	quote String required
+}
+
+relationship ManyToOne {
+  Result{vision(name) required} to Vision
+  Result{purpose(name) required} to Purpose
+  Result{role(name) required} to Role
+
+  Outcome{result(name) required} to Result
+
+  Character{result(name) required} to Result
+  Character{group(name) required} to CharacterGroup
+
+  Practice{character(name) required} to Character
+
+  Quote{character(name) required} to Character
+
+}
