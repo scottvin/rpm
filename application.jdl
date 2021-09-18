@@ -8,115 +8,433 @@ application {
         clientTheme Darkly
         clientThemeVariant light
 	}
+	entities *
 }
 
-// Result
-@filter(true)
+// RpmCategory
+//@filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+//@service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity Result {
+//@microservice(rpm)
+entity RpmCategory {
 	name String required
 }
 
-// Vision
-@filter(true)
+// RpmCategoryCollection
+//@filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+//@service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity Vision {
+//@microservice(rpm)
+entity RpmCategoryCollection {
 	name String required
 }
 
-// Purpose
-@filter(true)
+// RpmAspect
+//@filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+//@service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity Purpose {
+//@microservice(rpm)
+entity RpmAspect {
 	name String required
 }
 
-// Role
-@filter(true)
+// RpmAspectCollection
+//@filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+//@service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity Role {
+//@microservice(rpm)
+entity RpmAspectCollection {
 	name String required
 }
 
-// Outcome
+// RpmVision
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmVision {
+	name String required
+}
+
+// RpmVisionCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmVisionCollection {
+	name String required
+}
+
+// RpmPurpose
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmPurpose {
+	name String required
+}
+
+// RpmPurposeCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmPurposeCollection {
+	name String required
+}
+
+// RpmRole
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmRole {
+	name String required
+}
+
+// RpmRoleCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmRoleCollection {
+	name String required
+}
+
+// RpmResult
 @filter(true)
 @dto(mapstruct)
 @service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity Outcome {
+//@microservice(rpm)
+entity RpmResult {
+	name String required
+}
+
+// RpmResultCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmResultCollection {
+	name String required
+}
+
+// RpmPlan
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmPlan {
 	name String required
 	dateTime ZonedDateTime required
 	duration Duration required
 }
 
-// Character
+// RpmPlanCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmPlanCollection {
+	name String required
+}
+
+// RpmProject
 @filter(true)
 @dto(mapstruct)
 @service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity Character {
+//@microservice(rpm)
+entity RpmProject {
+	name String required
+	dateTime ZonedDateTime required
+	duration Duration required
+}
+
+// RpmProjectCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmProjectCollection {
+	name String required
+}
+
+// RpmOutcome
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmOutcome {
+	name String required
+	dateTime ZonedDateTime required
+	duration Duration required
+}
+
+// RpmOutcomeCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmOutcomeCollection {
+	name String required
+}
+
+// RpmAction
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmAction {
+	name String required
+	priority Integer required
+	dateTime ZonedDateTime required
+	duration Duration required
+}
+
+// RpmActionCollection
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmActionCollection {
+	name String required
+}
+
+// RpmReason
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmReason {
+	name String required
+	priority Integer required
+	dateTime ZonedDateTime required
+	duration Duration required
+}
+
+// RpmReasonCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmReasonCollection {
+	name String required
+}
+
+// RpmResource
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmResource {
+	name String required
+}
+
+// RpmResourceCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmResourceCollection {
+	name String required
+}
+
+// RpmCapture
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmCapture {
+	name String required
+	dateTime ZonedDateTime required
+	duration Duration required
+}
+
+// RpmCaptureCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmCaptureCollection {
+	name String required
+}
+
+// RpmCharacter
+@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmCharacter {
 	name String required
 	description String required
 	priority Integer required
 }
 
-// CharacterGroup
-@filter(true)
+// RpmCharacterCollection
+//@filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+//@service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity CharacterGroup {
+//@microservice(rpm)
+entity RpmCharacterCollection {
+	name String required
+}
+
+// RpmCharacterGroup
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmCharacterGroup {
 	name String required
 	priority Integer required
 }
 
-// Practice
-@filter(true)
+// RpmPractice
+//@filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+//@service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity Practice {
+//@microservice(rpm)
+entity RpmPractice {
 	practice String required
 }
 
-// Quote
-@filter(true)
+// RpmPracticeCollection
+//@filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+//@service(serviceImpl)
 @paginate(infinite-scroll)
-@microservice(rpm)
-entity Quote {
+//@microservice(rpm)
+entity RpmPracticeCollection {
+	practice String required
+}
+
+// RpmQuote
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmQuote {
 	quote String required
 }
 
+// RpmQuoteCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmQuoteCollection {
+	name String required
+}
+
+// RpmComment
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmComment {
+	Comment String required
+}
+
+// RpmCommentCollection
+//@filter(true)
+@dto(mapstruct)
+//@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmCommentCollection {
+	name String required
+}
+
+relationship OneToOne {
+    RpmResult{category(name) required} to RpmCategory
+    RpmResult{aspect(name) required} to RpmAspect
+    RpmResult{vision(name) required} to RpmVision
+    RpmResult{purpose(name) required} to RpmPurpose
+    RpmResult{role(name) required} to RpmRole
+    RpmResult{characters(name) required} to RpmCharacterCollection
+    RpmResult{actions(name) required} to RpmActionCollection
+    RpmResult{comments(name) required} to RpmCommentCollection
+
+    RpmProject{outcomes(name) required} to RpmOutcomeCollection
+    RpmProject{plans(name) required} to RpmPlanCollection
+    RpmProject{actions(name) required} to RpmActionCollection
+    RpmProject{comments(name) required} to RpmCommentCollection
+
+    RpmAction{plan(name) required} to RpmPlan
+    RpmAction{reason(name) required} to RpmReason
+    RpmAction{captures(name) required} to RpmCapture
+    RpmAction{resource(name) required} to RpmResource
+    RpmAction{comments(name) required} to RpmCommentCollection
+
+    RpmCharacter{practice(name) required} to RpmPracticeCollection
+    RpmCharacter{quotes(name) required} to RpmQuoteCollection
+    RpmCharacter{comments(name) required} to RpmCommentCollection
+}
+
 relationship ManyToOne {
-  Result{vision(name) required} to Vision
-  Result{purpose(name) required} to Purpose
-  Result{role(name) required} to Role
 
-  Outcome{result(name) required} to Result
+  RpmCategory{collection(name) required} to RpmCategoryCollection
 
-  Character{result(name) required} to Result
-  Character{group(name) required} to CharacterGroup
+  RpmAspect{collection(name) required} to RpmAspectCollection
 
-  Practice{character(name) required} to Character
+  RpmVision{collection(name) required} to RpmVisionCollection
 
-  Quote{character(name) required} to Character
+  RpmPurpose{collection(name) required} to RpmPurposeCollection
+
+  RpmRole{collection(name) required} to RpmRoleCollection
+
+  RpmResult{collection(name) required} to RpmResultCollection
+
+  RpmProject{collection(name) required} to RpmProjectCollection
+
+  RpmPlan{collection(name) required} to RpmPlanCollection
+
+  RpmOutcome{collection(name) required} to RpmOutcomeCollection
+
+  RpmAction{collection(name) required} to RpmActionCollection
+
+  RpmCapture{collection(name) required} to RpmCaptureCollection
+
+  RpmCharacter{collection(name) required} to RpmCharacterCollection
+  RpmCharacter{group(name) required} to RpmCharacterGroup
+
+  RpmPractice{collection(name) required} to RpmPracticeCollection
+
+  RpmQuote{collection(name) required} to RpmQuoteCollection
+
+  RpmComment{collection(name) required} to RpmCommentCollection
 
 }
