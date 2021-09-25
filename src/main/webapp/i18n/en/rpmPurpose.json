@@ -1,0 +1,24 @@
+{
+  "rpmApp": {
+    "rpmPurpose": {
+      "home": {
+        "title": "Rpm Purposes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Purpose",
+        "createOrEditLabel": "Create or edit a Rpm Purpose",
+        "notFound": "No Rpm Purposes found"
+      },
+      "created": "A new Rpm Purpose is created with identifier {{ param }}",
+      "updated": "A Rpm Purpose is updated with identifier {{ param }}",
+      "deleted": "A Rpm Purpose is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Purpose {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Purpose"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

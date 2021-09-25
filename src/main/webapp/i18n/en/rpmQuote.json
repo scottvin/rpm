@@ -1,0 +1,25 @@
+{
+  "rpmApp": {
+    "rpmQuote": {
+      "home": {
+        "title": "Rpm Quotes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Quote",
+        "createOrEditLabel": "Create or edit a Rpm Quote",
+        "notFound": "No Rpm Quotes found"
+      },
+      "created": "A new Rpm Quote is created with identifier {{ param }}",
+      "updated": "A Rpm Quote is updated with identifier {{ param }}",
+      "deleted": "A Rpm Quote is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Quote {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Quote"
+      },
+      "id": "ID",
+      "name": "Name",
+      "character": "Character"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "RpmOutcome",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Duration",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rpmProject",
+      "otherEntityRelationshipName": "rpmOutcome",
+      "relationshipValidateRules": "required",
+      "relationshipName": "project",
+      "otherEntityField": "name"
+    }
+  ],
+  "entityTableName": "rpm_outcome",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["rpm"],
+  "changelogDate": "20210925191402"
+}

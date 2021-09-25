@@ -1,0 +1,27 @@
+{
+  "rpmApp": {
+    "rpmPlan": {
+      "home": {
+        "title": "Rpm Plans",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Plan",
+        "createOrEditLabel": "Create or edit a Rpm Plan",
+        "notFound": "No Rpm Plans found"
+      },
+      "created": "A new Rpm Plan is created with identifier {{ param }}",
+      "updated": "A Rpm Plan is updated with identifier {{ param }}",
+      "deleted": "A Rpm Plan is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Plan {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Plan"
+      },
+      "id": "ID",
+      "name": "Name",
+      "dateTime": "Date Time",
+      "duration": "Duration",
+      "project": "Project"
+    }
+  }
+}

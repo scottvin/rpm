@@ -1,0 +1,27 @@
+{
+  "rpmApp": {
+    "rpmCharacter": {
+      "home": {
+        "title": "Rpm Characters",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Character",
+        "createOrEditLabel": "Create or edit a Rpm Character",
+        "notFound": "No Rpm Characters found"
+      },
+      "created": "A new Rpm Character is created with identifier {{ param }}",
+      "updated": "A Rpm Character is updated with identifier {{ param }}",
+      "deleted": "A Rpm Character is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Character {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Character"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "priority": "Priority",
+      "result": "Result"
+    }
+  }
+}

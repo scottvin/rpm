@@ -1,0 +1,30 @@
+{
+  "name": "RpmPractice",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rpmCharacter",
+      "otherEntityRelationshipName": "rpmPractice",
+      "relationshipValidateRules": "required",
+      "relationshipName": "character",
+      "otherEntityField": "name"
+    }
+  ],
+  "entityTableName": "rpm_practice",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["rpm"],
+  "changelogDate": "20210925192102"
+}

@@ -1,0 +1,29 @@
+{
+  "rpmApp": {
+    "rpmResult": {
+      "home": {
+        "title": "Rpm Results",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Result",
+        "createOrEditLabel": "Create or edit a Rpm Result",
+        "notFound": "No Rpm Results found"
+      },
+      "created": "A new Rpm Result is created with identifier {{ param }}",
+      "updated": "A Rpm Result is updated with identifier {{ param }}",
+      "deleted": "A Rpm Result is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Result {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Result"
+      },
+      "id": "ID",
+      "name": "Name",
+      "category": "Category",
+      "aspect": "Aspect",
+      "vision": "Vision",
+      "purpose": "Purpose",
+      "role": "Role"
+    }
+  }
+}

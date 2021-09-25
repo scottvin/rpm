@@ -1,0 +1,24 @@
+{
+  "rpmApp": {
+    "rpmCategory": {
+      "home": {
+        "title": "Rpm Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Category",
+        "createOrEditLabel": "Create or edit a Rpm Category",
+        "notFound": "No Rpm Categories found"
+      },
+      "created": "A new Rpm Category is created with identifier {{ param }}",
+      "updated": "A Rpm Category is updated with identifier {{ param }}",
+      "deleted": "A Rpm Category is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Category {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Category"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

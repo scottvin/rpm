@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+    <!--
+        Added the constraints for entity RpmResult.
+    -->
+    <changeSet id="20210925191102-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="rpm_result"
+                                 constraintName="fk_rpm_result__category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rpm_category"/>
+
+        <addForeignKeyConstraint baseColumnNames="aspect_id"
+                                 baseTableName="rpm_result"
+                                 constraintName="fk_rpm_result__aspect_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rpm_aspect"/>
+
+        <addForeignKeyConstraint baseColumnNames="vision_id"
+                                 baseTableName="rpm_result"
+                                 constraintName="fk_rpm_result__vision_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rpm_vision"/>
+
+        <addForeignKeyConstraint baseColumnNames="purpose_id"
+                                 baseTableName="rpm_result"
+                                 constraintName="fk_rpm_result__purpose_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rpm_purpose"/>
+
+        <addForeignKeyConstraint baseColumnNames="role_id"
+                                 baseTableName="rpm_result"
+                                 constraintName="fk_rpm_result__role_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rpm_role"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+{
+  "rpmApp": {
+    "rpmAspect": {
+      "home": {
+        "title": "Rpm Aspects",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Aspect",
+        "createOrEditLabel": "Create or edit a Rpm Aspect",
+        "notFound": "No Rpm Aspects found"
+      },
+      "created": "A new Rpm Aspect is created with identifier {{ param }}",
+      "updated": "A Rpm Aspect is updated with identifier {{ param }}",
+      "deleted": "A Rpm Aspect is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Aspect {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Aspect"
+      },
+      "id": "ID",
+      "name": "Name"
+    }
+  }
+}

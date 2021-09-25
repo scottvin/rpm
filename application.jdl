@@ -21,16 +21,6 @@ entity RpmCategory {
 	name String required
 }
 
-// RpmCategoryCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmCategoryCollection {
-	name String required
-}
-
 // RpmAspect
 //@filter(true)
 @dto(mapstruct)
@@ -38,16 +28,6 @@ entity RpmCategoryCollection {
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmAspect {
-	name String required
-}
-
-// RpmAspectCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmAspectCollection {
 	name String required
 }
 
@@ -61,16 +41,6 @@ entity RpmVision {
 	name String required
 }
 
-// RpmVisionCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmVisionCollection {
-	name String required
-}
-
 // RpmPurpose
 //@filter(true)
 @dto(mapstruct)
@@ -78,16 +48,6 @@ entity RpmVisionCollection {
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmPurpose {
-	name String required
-}
-
-// RpmPurposeCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmPurposeCollection {
 	name String required
 }
 
@@ -101,16 +61,6 @@ entity RpmRole {
 	name String required
 }
 
-// RpmRoleCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmRoleCollection {
-	name String required
-}
-
 // RpmResult
 @filter(true)
 @dto(mapstruct)
@@ -118,16 +68,6 @@ entity RpmRoleCollection {
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmResult {
-	name String required
-}
-
-// RpmResultCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmResultCollection {
 	name String required
 }
 
@@ -143,16 +83,6 @@ entity RpmPlan {
 	duration Duration required
 }
 
-// RpmPlanCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmPlanCollection {
-	name String required
-}
-
 // RpmProject
 @filter(true)
 @dto(mapstruct)
@@ -165,16 +95,6 @@ entity RpmProject {
 	duration Duration required
 }
 
-// RpmProjectCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmProjectCollection {
-	name String required
-}
-
 // RpmOutcome
 //@filter(true)
 @dto(mapstruct)
@@ -185,16 +105,6 @@ entity RpmOutcome {
 	name String required
 	dateTime ZonedDateTime required
 	duration Duration required
-}
-
-// RpmOutcomeCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmOutcomeCollection {
-	name String required
 }
 
 // RpmAction
@@ -210,16 +120,6 @@ entity RpmAction {
 	duration Duration required
 }
 
-// RpmActionCollection
-@filter(true)
-@dto(mapstruct)
-@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmActionCollection {
-	name String required
-}
-
 // RpmReason
 //@filter(true)
 @dto(mapstruct)
@@ -227,19 +127,6 @@ entity RpmActionCollection {
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmReason {
-	name String required
-	priority Integer required
-	dateTime ZonedDateTime required
-	duration Duration required
-}
-
-// RpmReasonCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmReasonCollection {
 	name String required
 }
 
@@ -250,16 +137,6 @@ entity RpmReasonCollection {
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmResource {
-	name String required
-}
-
-// RpmResourceCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmResourceCollection {
 	name String required
 }
 
@@ -275,16 +152,6 @@ entity RpmCapture {
 	duration Duration required
 }
 
-// RpmCaptureCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmCaptureCollection {
-	name String required
-}
-
 // RpmCharacter
 @filter(true)
 @dto(mapstruct)
@@ -295,16 +162,6 @@ entity RpmCharacter {
 	name String required
 	description String required
 	priority Integer required
-}
-
-// RpmCharacterCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmCharacterCollection {
-	name String required
 }
 
 // RpmCharacterGroup
@@ -325,17 +182,7 @@ entity RpmCharacterGroup {
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmPractice {
-	practice String required
-}
-
-// RpmPracticeCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmPracticeCollection {
-	practice String required
+	name String required
 }
 
 // RpmQuote
@@ -345,16 +192,6 @@ entity RpmPracticeCollection {
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmQuote {
-	quote String required
-}
-
-// RpmQuoteCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmQuoteCollection {
 	name String required
 }
 
@@ -365,76 +202,37 @@ entity RpmQuoteCollection {
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmComment {
-	Comment String required
-}
-
-// RpmCommentCollection
-//@filter(true)
-@dto(mapstruct)
-//@service(serviceImpl)
-@paginate(infinite-scroll)
-//@microservice(rpm)
-entity RpmCommentCollection {
 	name String required
 }
 
 relationship OneToOne {
+    RpmAction{plan(name) required} to RpmPlan
+    RpmAction{reason(name) required} to RpmReason
+    RpmAction{captures(name) required} to RpmCapture
+}
+
+relationship ManyToOne {
+
     RpmResult{category(name) required} to RpmCategory
     RpmResult{aspect(name) required} to RpmAspect
     RpmResult{vision(name) required} to RpmVision
     RpmResult{purpose(name) required} to RpmPurpose
     RpmResult{role(name) required} to RpmRole
-    RpmResult{characters(name) required} to RpmCharacterCollection
-    RpmResult{actions(name) required} to RpmActionCollection
-    RpmResult{comments(name) required} to RpmCommentCollection
 
-    RpmProject{outcomes(name) required} to RpmOutcomeCollection
-    RpmProject{plans(name) required} to RpmPlanCollection
-    RpmProject{actions(name) required} to RpmActionCollection
-    RpmProject{comments(name) required} to RpmCommentCollection
+    RpmResource{action(name) required} to RpmAction
 
-    RpmAction{plan(name) required} to RpmPlan
-    RpmAction{reason(name) required} to RpmReason
-    RpmAction{captures(name) required} to RpmCapture
-    RpmAction{resource(name) required} to RpmResource
-    RpmAction{comments(name) required} to RpmCommentCollection
+    RpmCharacter{result(name) required} to RpmResult
+    RpmAction{result(name) required} to RpmResult
+    RpmComment{result(name) required} to RpmResult
 
-    RpmCharacter{practice(name) required} to RpmPracticeCollection
-    RpmCharacter{quotes(name) required} to RpmQuoteCollection
-    RpmCharacter{comments(name) required} to RpmCommentCollection
-}
+    RpmOutcome{project(name) required} to RpmProject
+    RpmPlan{project(name) required} to RpmProject
+    RpmAction{project(name) required} to RpmProject
+    RpmComment{project(name) required} to RpmProject
+    RpmComment{action(name) required} to RpmAction
 
-relationship ManyToOne {
-
-  RpmCategory{collection(name) required} to RpmCategoryCollection
-
-  RpmAspect{collection(name) required} to RpmAspectCollection
-
-  RpmVision{collection(name) required} to RpmVisionCollection
-
-  RpmPurpose{collection(name) required} to RpmPurposeCollection
-
-  RpmRole{collection(name) required} to RpmRoleCollection
-
-  RpmResult{collection(name) required} to RpmResultCollection
-
-  RpmProject{collection(name) required} to RpmProjectCollection
-
-  RpmPlan{collection(name) required} to RpmPlanCollection
-
-  RpmOutcome{collection(name) required} to RpmOutcomeCollection
-
-  RpmAction{collection(name) required} to RpmActionCollection
-
-  RpmCapture{collection(name) required} to RpmCaptureCollection
-
-  RpmCharacter{collection(name) required} to RpmCharacterCollection
-  RpmCharacter{group(name) required} to RpmCharacterGroup
-
-  RpmPractice{collection(name) required} to RpmPracticeCollection
-
-  RpmQuote{collection(name) required} to RpmQuoteCollection
-
-  RpmComment{collection(name) required} to RpmCommentCollection
+    RpmPractice{character(name) required} to RpmCharacter
+    RpmQuote{character(name) required} to RpmCharacter
+    RpmComment{character(name) required} to RpmCharacter
 
 }

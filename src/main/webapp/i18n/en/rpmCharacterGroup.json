@@ -1,0 +1,25 @@
+{
+  "rpmApp": {
+    "rpmCharacterGroup": {
+      "home": {
+        "title": "Rpm Character Groups",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Character Group",
+        "createOrEditLabel": "Create or edit a Rpm Character Group",
+        "notFound": "No Rpm Character Groups found"
+      },
+      "created": "A new Rpm Character Group is created with identifier {{ param }}",
+      "updated": "A Rpm Character Group is updated with identifier {{ param }}",
+      "deleted": "A Rpm Character Group is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Character Group {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Character Group"
+      },
+      "id": "ID",
+      "name": "Name",
+      "priority": "Priority"
+    }
+  }
+}

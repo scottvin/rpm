@@ -1,0 +1,26 @@
+{
+  "rpmApp": {
+    "rpmCapture": {
+      "home": {
+        "title": "Rpm Captures",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rpm Capture",
+        "createOrEditLabel": "Create or edit a Rpm Capture",
+        "notFound": "No Rpm Captures found"
+      },
+      "created": "A new Rpm Capture is created with identifier {{ param }}",
+      "updated": "A Rpm Capture is updated with identifier {{ param }}",
+      "deleted": "A Rpm Capture is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rpm Capture {{ id }}?"
+      },
+      "detail": {
+        "title": "Rpm Capture"
+      },
+      "id": "ID",
+      "name": "Name",
+      "dateTime": "Date Time",
+      "duration": "Duration"
+    }
+  }
+}

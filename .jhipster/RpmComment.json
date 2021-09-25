@@ -1,0 +1,54 @@
+{
+  "name": "RpmComment",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rpmResult",
+      "otherEntityRelationshipName": "rpmComment",
+      "relationshipValidateRules": "required",
+      "relationshipName": "result",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rpmProject",
+      "otherEntityRelationshipName": "rpmComment",
+      "relationshipValidateRules": "required",
+      "relationshipName": "project",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rpmAction",
+      "otherEntityRelationshipName": "rpmComment",
+      "relationshipValidateRules": "required",
+      "relationshipName": "action",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rpmCharacter",
+      "otherEntityRelationshipName": "rpmComment",
+      "relationshipValidateRules": "required",
+      "relationshipName": "character",
+      "otherEntityField": "name"
+    }
+  ],
+  "entityTableName": "rpm_comment",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["rpm"],
+  "changelogDate": "20210925192302"
+}
