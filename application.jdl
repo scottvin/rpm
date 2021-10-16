@@ -7,6 +7,7 @@ application {
         clientFramework react
         clientTheme Darkly
         clientThemeVariant light
+        blueprints []
 	}
 	entities *
 }
@@ -14,225 +15,322 @@ application {
 // RpmCategory
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmCategory {
-	name String required
+	name String unique
+
 }
 
-// RpmAspect
+// RpmCategoryGroup
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
-entity RpmAspect {
-	name String required
+entity RpmCategoryGroup {
+	name String unique
+
 }
 
 // RpmVision
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmVision {
-	name String required
+	name String unique
+
 }
 
 // RpmPurpose
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmPurpose {
-	name String required
+	name String unique
+
 }
 
 // RpmRole
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmRole {
-	name String required
+	name String unique
+
 }
 
 // RpmResult
 @filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmResult {
-	name String required
+	name String unique
+	start Instant
+	stop Instant
+	duration Duration
 }
+
+
 
 // RpmPlan
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmPlan {
-	name String required
-	dateTime ZonedDateTime required
-	duration Duration required
+	name String unique
+
 }
 
 // RpmProject
 @filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmProject {
-	name String required
-	dateTime ZonedDateTime required
-	duration Duration required
+	name String unique
+
 }
 
-// RpmOutcome
+// RpmPriority Type
+enum RpmPriorityType {
+    HIGH(High)
+    MEDIUM(Medium)
+    LOW(Low)
+}
+
+// RpmPriority
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
-entity RpmOutcome {
-	name String required
-	dateTime ZonedDateTime required
-	duration Duration required
+entity RpmPriority {
+	name String unique
+	type RpmPriorityType
+	weight BigDecimal
 }
 
 // RpmAction
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmAction {
-	name String required
-	priority Integer required
-	dateTime ZonedDateTime required
-	duration Duration required
+	name String unique
+
 }
 
-// RpmReason
+// RpmMood
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
-entity RpmReason {
-	name String required
+entity RpmMood {
+	name String unique
+
 }
 
 // RpmResource
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmResource {
-	name String required
+	name String unique
+
 }
 
-// RpmCapture
+// RpmLocation
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
-entity RpmCapture {
-	name String required
-	dateTime ZonedDateTime required
-	duration Duration required
+entity RpmLocation {
+	name String unique
+
 }
 
-// RpmCharacter
-@filter(true)
+// RpmDateTime
+//@filter(true)
 @dto(mapstruct)
-@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
-entity RpmCharacter {
-	name String required
-	description String required
-	priority Integer required
+entity RpmDateTime {
+	name String unique
+
 }
 
 // RpmCharacterGroup
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmCharacterGroup {
-	name String required
-	priority Integer required
+	name String unique
+
+}
+
+// RpmCharacter
+@filter(true)
+@dto(mapstruct)
+@service(no)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmCharacter {
+	name String unique
+
 }
 
 // RpmPractice
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmPractice {
-	name String required
+	name String unique
+
 }
 
 // RpmQuote
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmQuote {
-	name String required
+	name String unique
+
+}
+
+// RpmCredit
+//@filter(true)
+@dto(mapstruct)
+@service(no)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmCredit {
+	name String unique
+
 }
 
 // RpmComment
 //@filter(true)
 @dto(mapstruct)
-//@service(serviceImpl)
+@service(no)
 @paginate(infinite-scroll)
 //@microservice(rpm)
 entity RpmComment {
-	name String required
+	name String unique
+
 }
 
+// RpmName
+//@filter(true)
+@dto(mapstruct)
+@service(no)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmName {
+	name String unique
+
+}
+
+// RpmDescription
+//@filter(true)
+@dto(mapstruct)
+@service(no)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmDescription {
+	name String unique
+
+}
+
+// RpmCapture
+//@filter(true)
+@dto(mapstruct)
+@service(serviceImpl)
+@paginate(infinite-scroll)
+//@microservice(rpm)
+entity RpmCapture
+
 relationship OneToOne {
-    RpmAction{plan(name) required} to RpmPlan
-    RpmAction{reason(name) required} to RpmReason
-    RpmAction{captures(name) required} to RpmCapture
+    /** Action TODO add User entity */
+    RpmAction{purpose} to RpmPurpose
+    RpmAction{expectedResult} to RpmResult
+    RpmAction{actualResult} to RpmResult
+    RpmAction{mood} to RpmMood
+    RpmAction{priority} to RpmPriority
+    RpmAction{role} to RpmRole
+    RpmAction{resource} to RpmResource
+    RpmAction{location} to RpmLocation
+    RpmAction{dateTime} to RpmDateTime
+
+
+
+    RpmCategory{vision} to RpmVision
+    RpmCategory{purpose} to RpmPurpose
+
+    RpmCapture{categoryGroup} to RpmCategoryGroup
+    RpmCapture{category} to RpmCategory
+
+    RpmCapture{characterGroup} to RpmCharacterGroup
+    RpmCapture{character} to RpmCharacter
+
+    RpmCapture{project} to RpmProject
+    RpmCapture{keyResult} to RpmResult
+
+    RpmCapture{plan} to RpmPlan
+
+    // Capture Action
+    RpmCapture{action} to RpmAction
+    RpmCapture{expectedResult} to RpmResult
+    RpmCapture{actualResult} to RpmResult
+    RpmCapture{mood} to RpmMood
+    RpmCapture{role} to RpmRole
+    RpmCapture{location} to RpmLocation
+
+
+    // Capture Common
+    RpmCapture{name} to RpmName
+    RpmCapture{description} to RpmDescription
+    RpmCapture{credit} to RpmCredit
+    RpmCapture{priority} to RpmPriority
+    RpmCapture{purpose} to RpmPurpose
+    RpmCapture{resource} to RpmResource
+    RpmCapture{quote} to RpmQuote
+    RpmCapture{practice} to RpmPractice
 }
 
 relationship ManyToOne {
-
-    RpmResult{category(name) required} to RpmCategory
-    RpmResult{aspect(name) required} to RpmAspect
-    RpmResult{vision(name) required} to RpmVision
-    RpmResult{purpose(name) required} to RpmPurpose
-    RpmResult{role(name) required} to RpmRole
-
-    RpmResource{action(name) required} to RpmAction
-
-    RpmCharacter{result(name) required} to RpmResult
-    RpmAction{result(name) required} to RpmResult
-    RpmComment{result(name) required} to RpmResult
-
-    RpmOutcome{project(name) required} to RpmProject
-    RpmPlan{project(name) required} to RpmProject
-    RpmAction{project(name) required} to RpmProject
-    RpmComment{project(name) required} to RpmProject
-    RpmComment{action(name) required} to RpmAction
-
-    RpmPractice{character(name) required} to RpmCharacter
-    RpmQuote{character(name) required} to RpmCharacter
-    RpmComment{character(name) required} to RpmCharacter
-
+    RpmComment{capture} to RpmCapture
+    RpmCharacter{category} to RpmCategory
+    RpmCharacter{group} to RpmCharacterGroup
+    RpmProject{category} to RpmCategory
+    RpmResult{project} to RpmProject
+    RpmPlan{project} to RpmProject
+    RpmAction{plan} to RpmPlan
+    RpmCategory{categoryGroup} to RpmCategoryGroup
+    RpmPractice{character} to RpmCharacter
+    RpmQuote{character} to RpmCharacter
 }
