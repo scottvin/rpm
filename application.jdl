@@ -1,7 +1,22 @@
 application {
 	config {
 	    applicationType gateway
-		baseName RpmCategory
+		baseName RpmPrimeGateway
+		packageName com.github.scottvin.rpm
+        buildTool gradle
+        clientFramework react
+        clientTheme Darkly
+        clientThemeVariant light
+        skipServer true
+        blueprints []
+	}
+	entities *
+}
+
+application {
+	config {
+	    applicationType gateway
+		baseName RpmGateway
 		packageName com.github.scottvin.rpm
         buildTool gradle
         clientFramework react
@@ -22,6 +37,7 @@ application {
         clientFramework react
         clientTheme Darkly
         clientThemeVariant light
+        skipClient true
         blueprints []
 	}
 	entities *
