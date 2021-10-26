@@ -1,7 +1,22 @@
 application {
 	config {
+	    applicationType gateway
+		baseName RpmCategory
+		packageName com.github.scottvin.rpm
+        buildTool gradle
+        clientFramework react
+        clientTheme Darkly
+        clientThemeVariant light
+        skipServer true
+        blueprints []
+	}
+	entities *
+}
+
+application {
+	config {
 	    applicationType monolith
-		baseName rpm
+		baseName Rpm
 		packageName com.github.scottvin.rpm
         buildTool gradle
         clientFramework react
